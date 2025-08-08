@@ -12,13 +12,31 @@ function Calculator() {
 			return;
 		}
 
+		if (
+			(lastChar === "+" || lastChar === "-") &&
+			(clickedValue === "+" || clickedValue === "-")
+		) {
+			return;
+		}
+
+		if (clickedValue === "r") {
+			setInput(input.slice(0, -1));
+
+			return;
+		}
+
 		if (clickedValue === "=") {
 			setResult(eval(input));
+			setInput("0");
 			return;
 		}
 
 		if (input === "0") {
-			setInput(clickedValue);
+			if (clickedValue === "+" || clickedValue === "-") {
+				return;
+			} else {
+				setInput(clickedValue);
+			}
 		} else {
 			setInput(input + clickedValue);
 		}
@@ -31,6 +49,9 @@ function Calculator() {
 			<div>
 				<button onClick={onClickHandler} value={0}>
 					0
+				</button>
+				<button onClick={onClickHandler} value={"r"}>
+					←
 				</button>
 			</div>
 			<div>
