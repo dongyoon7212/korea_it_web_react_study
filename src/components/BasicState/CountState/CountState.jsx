@@ -1,8 +1,11 @@
 import { useState } from "react";
+import CountHeader from "../CountHeader/CountHeader";
+import CountButton from "../CountButton/CountButton";
 
 function CountState() {
 	const [count, setCount] = useState(0);
 	// let count = 0;
+	console.log("countState 렌더링");
 
 	const onClickHandler = (e) => {
 		const num = parseInt(e.target.value);
@@ -23,19 +26,14 @@ function CountState() {
 
 	return (
 		<div>
-			<h1>{count}</h1>
-			<button value={1} onClick={onClickHandler}>
-				+1
-			</button>
-			<button value={-1} onClick={onClickHandler}>
-				-1
-			</button>
+			<CountHeader count={count} />
+			<CountButton value={1} onClick={onClickHandler} text={"+1"} />
+			<CountButton value={-1} onClick={onClickHandler} text={"-1"} />
 		</div>
 	);
 }
 
 export default CountState;
-
 
 /**
  * 리액트의 동작원리
@@ -46,11 +44,9 @@ export default CountState;
  * 상태(state)에 변화가 생기면, 리액트는 실제 돔을 바로 건드리지 않고 메모리 새 가상돔을 만든다
  * 이전 가상돔과 상태가 바뀐 새 가상돔과 비교하여 무엇이 바뀌었는지 그 차이점(diff)을 빠르게 찾아낸다
  * 찾아낸 다음 변경된 부분 만 모아서 실제 돔에게 이 부분만 바뀌었으니 여기만 좀 바꿔봐 라고 최종 업데이트를 요청한다
- * 
+ *
  * 2. 컴포넌트
  * 재사용이 가능한 레고블럭
  * 재사용이 가능하도록 ui를 만들고 여러 조각으로 나누어서 관리하는데, 이 조각 하나하나를 컴포넌트라고 한다
  * 한 화면은 여러 컴포넌트들을 조합해서 합쳐서 하나의 화면을 만든다
  */
-
-

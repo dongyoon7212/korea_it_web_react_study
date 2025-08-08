@@ -11,8 +11,8 @@ function App() {
 			{/* <BasicReact /> */}
 			{/* <BasicJsx /> */}
 			{/* <BasicProps /> */}
-			{/* <CountState /> */}
-			<Calculator />
+			<CountState />
+			{/* <Calculator /> */}
 		</>
 	);
 }
