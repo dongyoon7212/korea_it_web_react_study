@@ -15,6 +15,7 @@ import LifeCycle from "./components/LifeCycle/LifeCycle";
 import LifeCycleApp from "./components/LifeCycle/LifeCycleApp";
 import Render from "./components/LifeCycle/Render";
 import FruitsFilter from "./components/Practice/FruitsFilter/FruitsFilter";
+import SignupForm from "./components/Practice/SignupForm/SignupForm";
 import UserProfile from "./components/Practice/UserProfile/UserProfile";
 
 function App() {
@@ -36,7 +37,8 @@ function App() {
 			{/* <Effect1 /> */}
 			{/* <Effect2 /> */}
 			{/* <FruitsFilter /> */}
-			<UserProfile />
+			{/* <UserProfile /> */}
+			<SignupForm />
 		</>
 	);
 }
