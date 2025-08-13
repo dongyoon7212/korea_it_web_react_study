@@ -18,6 +18,7 @@ import Render from "./components/LifeCycle/Render";
 import FruitsFilter from "./components/Practice/FruitsFilter/FruitsFilter";
 import SignupForm from "./components/Practice/SignupForm/SignupForm";
 import UserProfile from "./components/Practice/UserProfile/UserProfile";
+import Index from "./components/TodoList/pages";
 
 function App() {
 	return (
@@ -40,7 +41,8 @@ function App() {
 			{/* <FruitsFilter /> */}
 			{/* <UserProfile /> */}
 			{/* <SignupForm /> */}
-			<Emotion1 />
+			{/* <Emotion1 /> */}
+			<Index />
 		</>
 	);
 }
