@@ -19,4 +19,7 @@ export const container = css`
 	background-color: white;
 	border-radius: 8px;
 	padding: 20px;
+	box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.5);
 `;
