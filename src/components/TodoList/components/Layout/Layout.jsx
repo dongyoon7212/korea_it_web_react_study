@@ -5,7 +5,9 @@ import * as s from "./styles";
 function Layout() {
 	return (
 		<div css={s.layout}>
-			<Header />
+			<div css={s.container}>
+				<Header />
+			</div>
 		</div>
 	);
 }
