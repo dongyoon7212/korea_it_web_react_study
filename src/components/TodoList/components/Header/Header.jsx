@@ -1,16 +1,33 @@
 /** @jsxImportSource @emotion/react */
 import { IoSearch } from "react-icons/io5";
 import * as s from "./styles";
+import { useState } from "react";
 
-function Header({ filter, setFilter }) {
+function Header({ filter, setFilter, setSearchText }) {
+	const [searchInputValue, setSearchInputValue] = useState("");
+
+	const searchInputOnChangeHandler = (e) => {
+		setSearchInputValue(e.target.value);
+	};
 	const filterOnChangeHandler = (e) => {
 		setFilter(e.target.id);
+	};
+	const searchButtonOnClickHandler = () => {
+		setSearchText(searchInputValue);
 	};
 	return (
 		<>
 			<div css={s.container}>
-				<input type="text" css={s.searchInput} />
-				<button css={s.searchButton}>
+				<input
+					type="text"
+					css={s.searchInput}
+					placeholder="검색어를 입력해주세요"
+					onChange={searchInputOnChangeHandler}
+				/>
+				<button
+					css={s.searchButton}
+					onClick={searchButtonOnClickHandler}
+				>
 					<IoSearch />
 				</button>
 			</div>
