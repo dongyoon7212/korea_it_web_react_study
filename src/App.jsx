@@ -22,6 +22,8 @@ import UserProfile from "./components/Practice/UserProfile/UserProfile";
 import Index from "./components/TodoList/pages";
 import Router1 from "./RouterStudy/Router1/Router1";
 import Router2 from "./RouterStudy/Router2/Router2";
+import Router3 from "./RouterStudy/Router3/Router3";
+import Router4 from "./RouterStudy/Router4/Router4";
 
 function App() {
 	return (
@@ -47,7 +49,9 @@ function App() {
 			{/* <Emotion1 /> */}
 			{/* <Index /> */}
 			{/* <Router1 /> */}
-			<Router2 />
+			{/* <Router2 /> */}
+			{/* <Router3 /> */}
+			<Router4 />
 		</BrowserRouter>
 		/**
 		 * BrowserRouter로 감싸진 내부에 있는 컴포넌트들만 Routes, Route, Link, useNavigation같은
